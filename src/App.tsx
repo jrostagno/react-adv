@@ -1,5 +1,11 @@
+import Navigation from "./routes/Navigation";
+
 const App = () => {
-  return <>index</>;
+  return (
+    <>
+      <Navigation />
+    </>
+  );
 };
 
 export default App;
