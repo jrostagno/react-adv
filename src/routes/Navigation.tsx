@@ -41,8 +41,8 @@ const Navigation = () => {
                 element={<route.Component />}
               />
             ))}
-
-            <Route path="/*" element={<Navigate to={routes[0].to} replace />} />
+            {/* 
+            <Route path="/*" element={<Navigate to={routes[0].to} replace />} /> */}
           </Routes>
         </div>
       </BrowserRouter>
