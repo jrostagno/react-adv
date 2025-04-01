@@ -1,5 +1,9 @@
 import { lazy, LazyExoticComponent } from "react";
 import NoLazy from "../01-LazyLoads/pages/NoLazy";
+import LazyPage1 from "../01-LazyLoads/pages/LazyPage1";
+import LazyPage2 from "../01-LazyLoads/pages/LazyPage2";
+import LazyPage3 from "../01-LazyLoads/pages/LazyPage3";
+import ShoppingPage from "../02-components-patters/pages/ShoppingPage";
 // import LazyPage1 from "../01-LazyLoads/pages/LazyPage1";
 // import LazyPage2 from "../01-LazyLoads/pages/LazyPage2";
 // import LazyPage3 from "../01-LazyLoads/pages/LazyPage3";
@@ -57,4 +61,25 @@ export const routes: Route[] = [
   //     Component: Lazy3,
   //     name: "Lazy-3",
   //   },
+];
+
+export const routesNoLazy: Route[] = [
+  {
+    to: "/about",
+    path: "/about",
+    Component: LazyPage1,
+    name: "About",
+  },
+  {
+    to: "/home",
+    path: "/home",
+    Component: ShoppingPage,
+    name: "Home",
+  },
+  {
+    to: "/users",
+    path: "users",
+    Component: LazyPage3,
+    name: "Users",
+  },
 ];

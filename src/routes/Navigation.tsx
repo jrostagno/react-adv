@@ -9,7 +9,7 @@ import {
 
 import logo from "../logo.svg";
 
-import { routes } from "./routes";
+import { routes, routesNoLazy } from "./routes";
 
 const Navigation = () => {
   return (
@@ -20,7 +20,7 @@ const Navigation = () => {
             <img src={logo} alt="logo" />
 
             <ul>
-              {routes.map((route) => (
+              {routesNoLazy.map((route) => (
                 <li key={route.path}>
                   <NavLink
                     className={({ isActive }) => (isActive ? "nav-active" : "")}
@@ -34,7 +34,7 @@ const Navigation = () => {
           </nav>
 
           <Routes>
-            {routes.map((route) => (
+            {routesNoLazy.map((route) => (
               <Route
                 key={route.to}
                 path={route.path}
