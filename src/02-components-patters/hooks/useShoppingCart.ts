@@ -14,35 +14,18 @@ export const useShoppingCart = () => {
     product: Product;
   }) => {
     setShoppingCart((oldShoppingCart) => {
-      const productInCart = oldShoppingCart[product.id] || {
-        ...product,
-        count: 0,
-      };
-
-      if (Math.max(productInCart.count + count, 0) > 0) {
-        const newValue = productInCart.count + count;
-
-        return {
-          ...oldShoppingCart,
-          [product.id]: { ...product, count: newValue },
-        };
+      if (count === 0) {
+        //opcion desestructuracion del objeto
+        // const { [product.id]: toDelete, ...rest } = oldShoppingCart;
+        // console.log(toDelete);
+        // return rest;
+        delete oldShoppingCart[product.id];
+        return { ...oldShoppingCart };
       }
-
-      const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-
-      return rest;
-      //   if (count === 0) {
-      //     //opcion desestructuracion del objeto
-      //     // const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-      //     // console.log(toDelete);
-      //     // return rest;
-      //     delete oldShoppingCart[product.id];
-      //     return { ...oldShoppingCart };
-      //   }
-      //   return {
-      //     ...oldShoppingCart,
-      //     [product.id]: { ...product, count },
-      //   };
+      return {
+        ...oldShoppingCart,
+        [product.id]: { ...product, count },
+      };
     });
   };
 
