@@ -17,7 +17,7 @@ export const useShoppingCart = () => {
       if (count === 0) {
         //opcion desestructuracion del objeto
         // const { [product.id]: toDelete, ...rest } = oldShoppingCart;
-        // console.log(toDelete);
+
         // return rest;
         delete oldShoppingCart[product.id];
         return { ...oldShoppingCart };

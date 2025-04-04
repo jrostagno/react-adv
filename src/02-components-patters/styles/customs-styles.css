@@ -27,3 +27,9 @@
   right: 10px;
   top: 0px;
 }
+
+.disable {
+  border-color: grey !important;
+  border-left: 1px solid white !important;
+  color: grey !important;
+}
