@@ -14,9 +14,6 @@ export const ProductButtons = ({ className, style }: Props) => {
     maxCount,
   } = useContext(ProductContext);
 
-  console.log(counter, maxCount);
-
-  console.log(counter === maxCount);
   return (
     <div style={style} className={`${styles.buttonsContainer} ${className}`}>
       <button className={styles.buttonMinus} onClick={() => increaseBy(-1)}>
