@@ -5,7 +5,6 @@ import "../styles/styles.css";
 import { MyCheckBox, MyTextInput, MySelect } from "../components";
 
 export const FormikAbstract = () => {
-  // console.log(values);
   return (
     <div>
       <h1>Formik FormikAbstract</h1>

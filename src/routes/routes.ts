@@ -9,6 +9,8 @@ import { FormikBasicPage } from "../03-forms/pages/FormikBasicPage";
 import { FormikYupPage } from "../03-forms/pages/FormikYuoPage";
 import { FormikComponents } from "../03-forms/pages/FormikComponents";
 import { FormikAbstract } from "../03-forms/pages/FormikAbstract";
+import { RegisterFormikPage } from "../03-forms/pages/RegisterFormikPage";
+import { DinamicForm } from "../03-forms/pages/DinamicForm";
 // import LazyPage1 from "../01-LazyLoads/pages/LazyPage1";
 // import LazyPage2 from "../01-LazyLoads/pages/LazyPage2";
 // import LazyPage3 from "../01-LazyLoads/pages/LazyPage3";
@@ -98,5 +100,17 @@ export const routesNoLazy: Route[] = [
     path: "/formik-abstract",
     Component: FormikAbstract,
     name: "Formik abstract",
+  },
+  {
+    to: "/registerformikPage",
+    path: "/registerformikPage",
+    Component: RegisterFormikPage,
+    name: "Register Formik page",
+  },
+  {
+    to: "/dinamicForm",
+    path: "/dinamicForm",
+    Component: DinamicForm,
+    name: "Dinamic Formik page",
   },
 ];
