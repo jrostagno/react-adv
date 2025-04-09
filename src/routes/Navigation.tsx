@@ -1,15 +1,9 @@
 import React, { Suspense } from "react";
-import {
-  BrowserRouter,
-  Navigate,
-  NavLink,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter, NavLink, Route, Routes } from "react-router-dom";
 
 import logo from "../logo.svg";
 
-import { routes, routesNoLazy } from "./routes";
+import { routesNoLazy } from "./routes";
 
 const Navigation = () => {
   return (
